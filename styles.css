@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --cor-fonte-primaria: #fff;
+    --cor-fonte-secundária: #c0c0c0;
+    --cor-fonte-tercearia: #f9f9f9;
+
+    --cor-background: #00030C;
+
+    --cor-botoes: #167BF7;
+
+    --tamanho-fonte-h2: 48px;
+    --tamanho-fonte-textos: 16px;
+
+    --peso-fonte-titulos: 700;
+    --peso-fonte-textos: 400;
+
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-background);
+    color: var(--cor-fonte-primaria);
+    font-family: var(--font-family);
+}
+
+.container {
+    align-items: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    justify-items: center;
+    padding: 0 6%;
+}
+
+.principal {
+    background-image: url(./img/Background.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    text-align: center;
+}
+
+.principal__organizacao {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.principal__titulo {
+    font-size: 28px;
+    font-weight: var(--peso-fonte-titulos);
+    margin-bottom: 4%;
+}
+
+.principal__imagem {
+    margin-bottom: 7%;
+}
+
+.container__botao {
+    background-color: var(--cor-botoes);
+    border-radius: 8px;
+    color: var(--cor-fonte-primaria);
+    font-size: var(--peso-fonte-textos);
+    font-weight: var(--peso-fonte-textos);
+    margin-bottom: 2%;
+    padding: 16px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.principal__botao {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.principal__aviso {
+    color: var(--cor-fonte-secundária);
+    font-size: 12px;
+    font-weight: var(--peso-fonte-textos);
+}
+
+.container__imagem {
+    width: 80%;
+}
+
+.container__organizacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 2%;
+}
+
+.organizacao__titulo {
+    font-size: var(--tamanho-fonte-h2);
+    font-weight: 700;
+}
+
+.organizacao__texto {
+    color: var(--cor-fonte-tercearia);
+    font-size: var(--peso-fonte-textos);
+    font-weight: 400;
+}
+
+.container__botao-secundario {
+    width: fit-content;
+}
+
+.dispositivos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin: 5em 0;
+}
+
+.dispositivos__lista {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+}
+
+.dispositivos__item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item__nome {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.rodape {
+    display: grid;
+    justify-items: center;
+    margin-bottom: 5em;
+    padding: 0 6%;
+    text-align: center;
+}
+
+.rodape__imagem {
+    margin: 5em 0 3em 0;
+}
+
+.rodape__lista {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 2em;
+}
+
+.rodape__link {
+    color: var(--cor-fonte-primaria);
+    text-decoration: none;
+}
+
+.rodape__texto {
+    color: var(--cor-fonte-secundária);
+    font-size: 14px;
+    font-weight: var(--tamanho-fonte-textos);
+    margin-bottom: 2em;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .principal {
+        background-image: none;
+    }
+
+    .principal__titulo {
+        font-size: 20px;
+        margin-bottom: 10%;
+    }
+
+    .principal__imagem {
+        margin-bottom: 10%;
+        width: 50vw;
+    }
+
+    .container__botao {
+        margin-bottom: 5%;
+    }
+
+    .container__imagem {
+        margin-bottom: 10%;
+        width: 70vw;
+    }
+
+    .container__organizacao {
+        align-items: center;
+    }
+
+    .organizacao__texto {
+        margin-bottom: 5%;
+    }
+    
+    .container__botao-secundario {
+        margin-bottom: 10%;
+    }
+
+    .dispositivos {
+        text-align: center;
+        width: 100vw;
+    }
+
+    .organizacao__titulo {
+        width: 80%;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column;
+    }
+
+    .rodape {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rodape__lista {
+        flex-direction: column;
+    }
+}
